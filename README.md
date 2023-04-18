@@ -1,5 +1,5 @@
 # Implementation of Bilteral-Filter on Rosario Dataset
-##
+## Run ROS bagfiles of Rosario Dataset through ORB_SLAM2 
 After install ORB_SALM2 and ROS, call roscore
 ```
 roscore
@@ -15,20 +15,24 @@ Download the orbslam_ros.yaml file from the web and put it in ORB_SALM2，synchr
 rosparam set use_sim_time true 
 rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/ROS/ORB_SLAM2/orbslam_ros.yaml.txt true 
 ```
-Extract the bag files and feed into ORB_SLAM2
+Extract the bag files and feed into ORB_SLAM2.
 ```
 rosparam set use_sim_time true 
 rosbag play sequence03.bag --clock -r 0.5 
 ```
-After playing the bag file, exit ORB_SLAM2 and save the trajectory 
-
-Install the evaluation software 
+After playing the bag file, exit ORB_SLAM2 and save the trajectory.
+## Install the evaluation software 
+``
 sudo apt install python-pip 
 pip install evo --upgrade --no-binary evo 
-after installing the evaluation software 
-evaluate the absolute pose error by 
+```
+After installing the evaluation software, evaluate the absolute pose error.
+```
 evo_ape tum truth.txt before_filter.txt -p -va
 evo_ape tum truth.txt after_filter.txt -p -va 
+```
 Generate the comparison for trajectory by 
+```
 evo_traj tum --ref=truth.txt before_filter.txt after_filter.txt -p -va 
+```
 
