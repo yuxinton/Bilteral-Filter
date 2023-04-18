@@ -23,7 +23,8 @@ rosparam set use_sim_time true
 rosbag play sequence03.bag --clock -r 0.5 
 ```
 After playing the bag file, exit ORB_SLAM2 and save the trajectory.
-## Install and run the evaluation software 
+## Install evaluation software 
+Install the evaluation software [evo](https://github.com/MichaelGrupp/evo)
 ```
 sudo apt install python-pip 
 pip install evo --upgrade --no-binary evo 
