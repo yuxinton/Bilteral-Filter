@@ -1,5 +1,5 @@
 # Implementation of Bilteral-Filter on Rosario Dataset
-##Background
+## Background
 Filtering is an essential technique in image processing and computer vision, where the value of a filtered image at a specific location is determined based on the values of nearby pixels in the input image. Gaussian low-pass filtering is an example of such filtering, which calculates a weighted average of pixel values in a neighborhood, with the weights decreasing as the distance from the center of the neighborhood increases. This approach is suitable for images that change slowly over space since nearby pixels are likely to have similar values. As a result, averaging them preserves the signal while reducing noise. However, this approach is not effective for images with edges as they are blurred by linear low-pass filtering. Many techniques have been developed to avoid this undesired effect, and bilateral filtering is a simple, non-iterative method that preserves edges while smoothing smooth regions.
 
 ## Run ROS bagfiles of Rosario Dataset through ORB_SLAM2 
