@@ -4,7 +4,7 @@ After install ORB_SALM2 and ROS, call roscore
 ```
 roscore
 ```
-Replace the ORBextractor.cc from the orignial ORB_SLAM2 with the ORBextractor.cc in this repo.
+Replace the ORBextractor.cc from the orignial ORB_SLAM2 with the [ORBextractor.cc](https://github.com/yuxinton/Bilteral-Filter/blob/main/ORBextractor.cc) in this repo.
 
 Recompile ORB_SLAM2 and add the directory to the 'ros_package_path', and then build the project.
 ```
